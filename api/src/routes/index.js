@@ -32,21 +32,7 @@ router.post('/countries',async (req,res)=>{
         
     }))
     await Promise.all(countries)
-    //     .then(respuesta=>respuesta.json())
-    //     .then(json=>json.forEach(element => {
-    //         Country.create({
-    //         ID:element.cca3,
-    //         name:element.name.common,
-    //         flagImage:element.flags[1],
-    //         continent:element.continents,
-    //         capital:element.capital, //hay problemas con algunos datos que son null en capital
-    //         subregion:element.subregion,
-    //         area:element.area,
-    //         population:element.population
-            
-    //     });
-    // }))
-        
+    
     res.json('se cargó la base de datos countries')
         
     } catch (error) {
@@ -62,7 +48,7 @@ router.get('/countries', async (req,res,next)=>{
 
             console.log(name)
             const countries=await Country.findAll({
-                attributes: ['flagImage', 'name','continent'],
+                attributes: ['ID','flagImage', 'name','continent'],
                 where: {
                     name: {[Op.like]:`%${name}%`},
                   }
@@ -74,7 +60,7 @@ router.get('/countries', async (req,res,next)=>{
             
         }
         const countries= await Country.findAll({
-            attributes: ['flagImage', 'name','continent']
+            attributes: ['ID','flagImage', 'name','continent']
           });
         // console.log(countries);
        return res.json(countries)

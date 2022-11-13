@@ -1,0 +1,65 @@
+.contenedorPrincipal{
+    background-color: #fff;
+    margin-top: 80px;    
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    height: fit-content;
+}
+
+.bandera{
+    display: flex;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 8px;
+    height: 100%;
+    width: 40%;
+    margin: 20px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff
+}
+.detalles{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    width: 40%;
+    
+}
+
+.detallePais{
+    
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 8px;
+    font: 20px bold;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+}
+
+.contenedorActividades{
+    
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: #fff;
+    width: 100%;
+}
+
+.detallesActividad{
+    margin: 10px;
+    background-color: #ebebeb;
+    padding: 10px;
+}
+
+.tituloActividad{
+    width: 100%;
+}

@@ -1,0 +1,19 @@
+.navBar{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background-color: #fff159;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonHome{
+    background-color: #fff;
+    height: 70%;
+    border-color: #fff;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}

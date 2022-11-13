@@ -1,31 +1,27 @@
-import React from "react";
-import { mapStateToProps } from "../Countries/Countries";
+import React,{useState} from "react";
+import './searchbar.css'
+
 
 export default function Searchbar(props){
-    // return(
-    //     <div>
-    //         <input type="text" name={props.name} onChange={props.handleChange} />
-    //         <button type="submit" onClick={props.handleClick}></button>
-    //     </div>
-    // )
-
+    const [country, setCountry] = useState("");
     return(
-        <div>
-            {/* <form > */}
-                {/* <select name={props.name} onChange={props.handleChange} id=""> */}
-                {/* <select  id=`${props.name}` onChange={props.handleChange}> */}
-                    {/* <option value="">--Elija un pais-</option> */}
-                    {/* <option >Argentina</option> */}
-                   
-                {/* </select>     */}
-                
-            {/* </form> */}
-            {/* <form onSubmit={props.handleChange}>
-            <input type='text' name={props.name} ></input>
-            <button type='submit' >Buscar</button>
-
-            </form> */}
-            <input type="text"  name={props.name} onChange={props.handleChange} />
-        </div>        
-)
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          props.onSearch(country);
+          setCountry('')
+        }}>
+          <input
+            className="nav-search-input"
+            type="text"
+            placeholder="País..."
+            value={country}
+            onChange={e => setCountry(e.target.value)}
+          />
+          <button className="nav-search-btn" type="submit" value="Buscar">
+            <div role='img' aria-label="Buscar" className="nav-icon-search">
+              
+            </div>
+          </button>
+        </form>
+      )
 }

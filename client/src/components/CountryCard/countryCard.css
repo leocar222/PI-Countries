@@ -1,4 +1,32 @@
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
 .countryCard{
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    width: fit-content;
+    height: fit-content;
+    border: 5px;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    /* transform: scale(1.15); */
+}
+.countryCard:hover{
 
+     transform: scale(1.15);
+     /* cursor: pointer; */
+}
+.banderas{
+    width:400px ;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.link{
+    color:#333;
+    text-decoration: none;
 }

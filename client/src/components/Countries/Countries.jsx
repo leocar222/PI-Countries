@@ -1,36 +1,28 @@
-import React , {useEffect} from "react";
-import { useDispatch } from "react-redux";
+import React  from "react";
 import CountryCard from "../CountryCard/CountryCard";
 import {connect} from 'react-redux';
-import * as actions from "./../../redux/actions";
+import './countries.css'
 
 
 
  function Countries(props){
-    const dispatch=useDispatch();
-    useEffect(()=>dispatch(actions.getCountries()),[])
     return(        
-        <div className="home">
+        <div className="countriesContainer">
         
         {
-            props.countries?.map(el=>
+            props.paises?.map(el=>
                 <CountryCard key={el.ID} id={el.ID} image={el.flagImage} name={el.name} continent={el.continent}></CountryCard>
                 )
             }
         </div>
     )
 }
-
 export const mapStateToProps = (state) => {
     return{
-        countries: state.countries,
+        countries:state.countries,
+        countriesFilter: state.countriesFilter,
     }
 }
 
-export const mapDispatchToProps = (dispatch) => {
-    return{
-      getCountries:async()=>await dispatch(actions.getCountries()),
-    }
-   }
 
-  export default connect(mapStateToProps, mapDispatchToProps)(Countries);
+  export default connect(mapStateToProps, null)(Countries);

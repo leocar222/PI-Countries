@@ -1,14 +1,15 @@
 import React from "react";
 import { Component } from "react";
 
-export class Landing extends Component{
+export default class Landing extends Component{
 
     componentDidMount(){
         fetch('http://localhost:3001/countries',
         { method: 'POST',
             //    headers: myHeaders,
                mode: 'cors',
-               cache: 'default' })
+               cache: 'default' });
+        
             }
 
     render(){
@@ -20,3 +21,5 @@ export class Landing extends Component{
 
     }
 }
+
+

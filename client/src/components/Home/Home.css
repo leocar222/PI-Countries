@@ -1,0 +1,30 @@
+.botonCrear{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+}
+
+.nav-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.nav-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+}
+
+.nav-search{
+    display: flex;
+    width: 300px;
+    height: fit-content;
+    justify-content: space-between;
+}
